@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
+
 {
+    private GameManager _gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -18,7 +20,15 @@ public class DetectCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (other.CompareTag("Player"))
+        {
+            _gameManager.AddLives(-1);
+            Destroy(gameObject);
+        }
+        else if (other.CompareTag("Food"))
+        {
+            this.GetComponent<AnimalHunger>().FeedAnimal(1);
+        }
+        
     }
 }

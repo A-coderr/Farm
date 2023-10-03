@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 330880217667264502}
   m_Layer: 0
   m_Name: Food
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,8 +131,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.66365004, y: 0.13385928, z: 0.29866797}
-  m_Center: {x: 0.0053806156, y: 0.06692964, z: -0.000000029802322}
+  m_Size: {x: 0.7348473, y: 0.1964697, z: 0.45424604}
+  m_Center: {x: -0.0068866014, y: 0.06582424, z: 0.019601583}
 --- !u!54 &330880217667264502
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
 
+    public Transform projectileSpawnPoint;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Creates a copy of the object that already exists
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
 
         }
     }
